@@ -1,0 +1,99 @@
+@import "tailwindcss";
+
+:root {
+  --forge-bg: #080a14;
+  --forge-bg-soft: #0c1020;
+  --forge-sidebar: #0b0e1b;
+  --forge-panel: #12182a;
+  --forge-panel-soft: #151d34;
+  --forge-text: #f8f9ff;
+  --forge-muted: #a6afc8;
+  --forge-dim: #697390;
+  --forge-line: rgba(193, 205, 255, 0.11);
+  --forge-line-strong: rgba(193, 205, 255, 0.19);
+  --forge-purple: #8066ff;
+  --forge-purple-light: #a177ff;
+  --forge-blue: #4e9cff;
+  --forge-green: #42d7a5;
+  --forge-yellow: #ffcb62;
+  --forge-red: #ff718d;
+}
+
+@theme inline {
+  --color-forge-bg: var(--forge-bg);
+  --color-forge-bg-soft: var(--forge-bg-soft);
+  --color-forge-sidebar: var(--forge-sidebar);
+  --color-forge-panel: var(--forge-panel);
+  --color-forge-panel-soft: var(--forge-panel-soft);
+  --color-forge-text: var(--forge-text);
+  --color-forge-muted: var(--forge-muted);
+  --color-forge-dim: var(--forge-dim);
+  --color-forge-purple: var(--forge-purple);
+  --color-forge-blue: var(--forge-blue);
+  --color-forge-green: var(--forge-green);
+  --color-forge-yellow: var(--forge-yellow);
+  --font-sans: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background: var(--forge-bg);
+}
+
+body {
+  min-width: 320px;
+  background:
+    radial-gradient(850px 500px at 98% -4%, rgba(67, 83, 255, 0.17), transparent 68%),
+    radial-gradient(680px 450px at 9% 5%, rgba(125, 83, 255, 0.16), transparent 68%),
+    var(--forge-bg);
+  color: var(--forge-text);
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+::selection {
+  background: rgba(128, 102, 255, 0.45);
+  color: white;
+}
+
+.panel {
+  border: 1px solid var(--forge-line);
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.012));
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.09);
+}
+
+.panel-muted {
+  border: 1px solid var(--forge-line);
+  background: rgba(255, 255, 255, 0.024);
+}
+
+.app-grid-background {
+  background-image:
+    linear-gradient(rgba(177, 194, 255, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(177, 194, 255, 0.035) 1px, transparent 1px);
+  background-size: 48px 48px;
+  mask-image: linear-gradient(to bottom, black, transparent);
+}
+
+.scrollbar-thin::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb {
+  border-radius: 999px;
+  background: rgba(166, 175, 200, 0.2);
+}
+
+.scrollbar-thin::-webkit-scrollbar-track {
+  background: transparent;
+}
